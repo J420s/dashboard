@@ -1,0 +1,380 @@
+@import "https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700";
+
+body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #aee0fa; 
+    text-align: left;
+    background-color: #0b0c0e
+}
+
+p {
+    padding-bottom: 1rem;
+    margin: 0;
+    line-height: 1.2;
+}
+
+h5 {
+    margin: 0 rem;
+    font-size: 1.25rem;
+    font-weight: 500;
+    line-height: 1.2;
+    margin-bottom: 0;
+}
+
+a {
+    color: #0f9ce6;
+    text-decoration: none;
+    background-color: transparent
+}
+
+a:hover {
+    color: #66c4f5;
+    text-decoration: none;
+}
+
+/************** Navbar **************/
+
+.navbar > a{
+    color: #0f9ce6;
+    text-decoration: none;
+    background-color: transparent;
+    padding-right:4vh;
+}
+.navbar > a:hover{
+    color: #66c4f5;
+    text-decoration: none;
+}
+
+.navbar {
+    background-color: #161e25;
+}
+
+.card>.navbar{
+    background-color: transparent;
+}
+
+/************** Dropdown usuario **************/
+.dropdown{
+    color: #0f9ce6;
+    text-decoration: none;
+    background-color: transparent
+}
+
+.dropdown-menu{
+    
+    background-color: rgb(10, 30, 41);
+    border: 1px solid rgba(15, 156, 230, 0.35);
+    box-shadow: inset 0 0 25px rgb(15 156 230 / 25%); /* Efecto difuminado */
+}
+
+.dropdown-item{
+    color: #0f9ce6;
+
+}
+
+/************** Wrapper **************/
+.wrapper {
+    display: flex;
+    align-items: stretch;
+    box-shadow: inset 0 0 25px rgb(15 156 230 / 25%); /* Efecto difuminado */
+}
+
+/************** Sidebar **************/
+@media (max-width: 768px) {
+    #sidebar {
+        margin-left: -250px;
+    }
+    #sidebar.showed {
+        margin-left: 0;
+    }
+}
+
+#sidebar {
+    min-width: 250px;
+    max-width: 250px;
+    min-height: 100%;
+    transition: all 0.3s;
+    text-align: left;
+    font-size: 1.15rem;
+    color: rgb(75, 75, 75);
+    background-color: transparent;
+}
+
+/** Esconder sidebar **/
+.showed {
+    margin-left: -250px;
+}
+
+#sidebar ul p {
+    padding: 10px;
+}
+
+/** Links sidebar **/
+.nav-sidebar .nav-link.active {
+    color: #aee0fa;
+    background-color: rgba(15, 156, 230, .25);
+    box-shadow: inset 0 0 2rem rgb(15 156 230 / 45%),
+    0 0 1rem rgb(15 156 230 / 15%);
+}
+
+/***** Botón para colapsar el sidebar ****/
+#menu-minifier {
+    position: relative;
+    padding: .25rem .5rem;
+    line-height: 100%
+}
+#menu-minifier label {
+    width: 2rem;
+    height: 2rem;
+    position: relative;
+    margin-bottom: 0;
+    line-height: inherit;
+    overflow: hidden;
+    outline: 0;
+    cursor: pointer
+}
+#menu-minifier input[type=checkbox] {
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    cursor: pointer
+}
+#menu-minifier .menu-dots {
+    fill: rgba(15, 156, 230, .45)
+}
+#menu-minifier .menu-lines {
+    fill: rgba(15, 156, 230, .45)
+}
+#menu-minifier:hover .menu-dots {
+    fill: #0f9ce6
+}
+#menu-minifier:hover .menu-lines {
+    fill: rgba(15, 156, 230, .45)
+}
+#menu-minifier.mini .menu-dots {
+    fill: #0f9ce6
+}
+#menu-minifier.mini .menu-lines {
+    fill: rgba(15, 156, 230, .45)
+}
+#menu-minifier.mini:hover .menu-dots {
+    fill: #0f9ce6
+}
+#menu-minifier.mini:hover .menu-lines {
+    fill: #0f9ce6
+}
+
+/***** Cards para componentes / instrumentos ****/
+
+@media (max-width: 768px) {
+    .tools>.card {
+        height: 15vh;
+    }
+}
+
+.card {
+    margin: .75rem 0;
+    padding: 0;
+    border: 1px solid rgba(15, 156, 230, 0.35);
+    background-color:transparent; 
+    box-shadow: inset 0 0 25px rgb(15 156 230 / 25%); /* Efecto difuminado */
+}
+.card-body {
+    padding: 1.25rem;
+    border-bottom: 1px solid rgba(15, 156, 230, .35);
+}
+
+/************** Cámaras principales **************/
+.card-stream {
+    display: block;
+    background-color: rgba(15, 156, 230, .05);
+    box-shadow: inset 0 0 4rem rgba(15, 156, 230, .15)
+}
+
+/** Square **/
+/***** Usado junto a card para algunos componentes ****/
+.square {
+    padding-top:20px;
+    padding-bottom:20px;
+    width: 100px;
+    min-height:100px;
+    color: #0f9ce6;
+}
+.square>svg:hover {
+    box-shadow: 0 0 24px rgba(15, 156, 230, .45);
+    stroke: rgba(15, 156, 230, 1);
+    stroke-opacity:1;
+}
+
+.square+h5{
+    text-align: center;
+    font-size: medium;
+}
+
+
+/************** Listas componentes **************/
+.list-group {
+    border-bottom: 1px solid rgba(15, 156, 230, .35);
+}
+
+.list-group-item {
+    background-color: transparent;
+    border:0;
+}
+
+/************** Garaje **************/
+/** Progress bar **/
+.progress-bar{
+ 
+}
+
+
+
+/************* Checkbox W3C *************/
+/** Encontré este checkbox en W3C y lo modifiqué para que se ajustara al estilo **/
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+    border: 1px solid rgba(15, 156, 230, .35);
+}
+.slider {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    -webkit-transition: .4s;
+    transition: .4s;
+    border: 1px solid rgba(15, 156, 230, .35);
+    border-radius: 34px;
+}
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 3px;
+    background-color: rgba(15, 156, 230, .35);
+    -webkit-transition: .4s;
+    transition: .4s;
+    border-radius: 50%;
+}
+input:checked+.slider {
+    /***Hover -> shine!*/
+    background-color: rgba(15, 156, 230, .05);
+    box-shadow: 0 0 24px rgba(15, 156, 230, .45);
+    border: 1px solid rgba(15, 156, 230, .75);
+}
+input:checked+.slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+    text-indent: -10px;
+}
+
+
+/* If you want you can use font-face */
+@font-face {
+    font-family: 'BebasNeueRegular';
+    src: url('BebasNeue-webfont.eot');
+    src: url('BebasNeue-webfont.eot?#iefix') format('embedded-opentype'),
+         url('BebasNeue-webfont.woff') format('woff'),
+         url('BebasNeue-webfont.ttf') format('truetype'),
+         url('BebasNeue-webfont.svg#BebasNeueRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.container {
+    
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.clock {
+   
+    margin: 0 auto;
+    padding: 5px;
+    color: #aee0fa;
+}
+
+#Date {
+    font-family: 'BebasNeueRegular', Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    text-align: center;
+    text-shadow: 0 0 5px #00c6ff;
+}
+
+ul {
+   
+    margin: 0 auto;
+    padding: 0px;
+    list-style: none;
+    text-align: center;
+}
+
+ul li {
+    display: inline;
+    font-size: 25px;
+    text-align: center;
+    font-family: 'BebasNeueRegular', Arial, Helvetica, sans-serif;
+    text-shadow: 0 0 5px #00c6ff;
+}
+
+#point {
+    position: relative;
+    -moz-animation: mymove 1s ease infinite;
+    -webkit-animation: mymove 1s ease infinite;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+/* Simple Animation */
+@-webkit-keyframes mymove {
+    0% {opacity: 1.0;
+    text-shadow: 0 0 20px #00c6ff;
+}
+
+50% {
+    opacity: 0;
+    text-shadow: none;
+}
+
+100% {
+    opacity: 1.0;
+    text-shadow: 0 0 20px #00c6ff;
+}	
+}
+
+@-moz-keyframes mymove {
+    0% {
+        opacity: 1.0;
+        text-shadow: 0 0 20px #00c6ff;
+    }
+
+    50% {
+        opacity: 0;
+        text-shadow: none;
+    }
+
+    100% {
+        opacity: 1.0;
+        text-shadow: 0 0 20px #00c6ff;
+    };
+}
+
