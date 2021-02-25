@@ -231,8 +231,12 @@ a:hover {
 
 /************** Garaje **************/
 /** Progress bar **/
-.progress-bar{
- 
+.progress-complete{
+    width: 100%;
+}
+
+.progress-empty{
+    width: 100%;
 }
 
 
@@ -287,19 +291,6 @@ input:checked+.slider:before {
     text-indent: -10px;
 }
 
-
-/* If you want you can use font-face */
-@font-face {
-    font-family: 'BebasNeueRegular';
-    src: url('BebasNeue-webfont.eot');
-    src: url('BebasNeue-webfont.eot?#iefix') format('embedded-opentype'),
-         url('BebasNeue-webfont.woff') format('woff'),
-         url('BebasNeue-webfont.ttf') format('truetype'),
-         url('BebasNeue-webfont.svg#BebasNeueRegular') format('svg');
-    font-weight: normal;
-    font-style: normal;
-}
-
 .container {
     
     margin: 0 auto;
@@ -314,7 +305,7 @@ input:checked+.slider:before {
 }
 
 #Date {
-    font-family: 'BebasNeueRegular', Arial, Helvetica, sans-serif;
+    
     font-size: 15px;
     text-align: center;
     text-shadow: 0 0 5px #00c6ff;
@@ -332,7 +323,7 @@ ul li {
     display: inline;
     font-size: 25px;
     text-align: center;
-    font-family: 'BebasNeueRegular', Arial, Helvetica, sans-serif;
+    
     text-shadow: 0 0 5px #00c6ff;
 }
 

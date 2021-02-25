@@ -63,14 +63,14 @@
             </a>
             <div class="clock">
                 <div id="Date"></div>
-                  <ul>
-                      <li id="hours"></li>
-                      <li id="point">:</li>
-                      <li id="min"></li>
-                      <li id="point">:</li>
-                      <li id="sec"></li>
-                  </ul>
-                </div>
+                <ul>
+                    <li id="hours"></li>
+                    <li id="point">:</li>
+                    <li id="min"></li>
+                    <li id="point">:</li>
+                    <li id="sec"></li>
+                </ul>
+            </div>
             <!--- Profile dropdown --->
             <a href="#" class="dropdown user-dropdown ml-auto" data-toggle="dropdown" aria-haspopup="true">
                 Username
@@ -166,14 +166,16 @@
                             <div class="card-body">
                                 <div class="title-status d-flex">
                                     <h5>Puerta: Garaje</h5>
-                                    <button type="button" class="btn btn-outline-primary ml-auto">Abrir</button>
+                                    <button id="btn-progress" type="button"
+                                        class="btn btn-outline-primary ml-auto">Abrir</button>
                                 </div>
                                 <p class="status text-danger">Cerrada</p>
                                 <div class="progress bg-dark" style="height: 2px;">
-                                    <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width:75%;background-color:green"></div>
-                                  </div>
+                                    <div class="progress-bar progress-bar-striped progress-bar-animated"
+                                        style="background-color:green"></div>
+                                </div>
                             </div>
-                            
+
                         </div>
                     </div>
                 </div>
@@ -449,6 +451,11 @@
 
     </div>
 
+    <!-- JQuery JS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"
+        integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous"></script>
+
 
     <!-- Font Awesome JS -->
     <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js"
@@ -458,16 +465,18 @@
         integrity="sha512-UwcC/iaz5ziHX7V6LjSKaXgCuRRqbTp1QHpbOJ4l1nw2/boCfZ2KlFIqBUA/uRVF0onbREnY9do8rM/uT/ilqw=="
         crossorigin="anonymous"></script>
 
+    <!-- Bootstrap JS -->
     <script src="https://gitcdn.github.io/bootstrap-toggle/2.2.2/js/bootstrap-toggle.min.js"></script>
-
-
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js "
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM "
         crossorigin="anonymous "></script>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     
+
+
+    <!-- Mi JS -->
     <script src="./assets/js/dashboard.js"></script>
+
 </body>
 
 </html>
