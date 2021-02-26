@@ -8,7 +8,8 @@ body {
     line-height: 1.5;
     color: #aee0fa; 
     text-align: left;
-    background-color: #0b0c0e
+    background-color: #0b0c0e;
+   
 }
 
 p {
@@ -50,7 +51,7 @@ a:hover {
 }
 
 .navbar {
-    background-color: #161e25;
+    background-color: transparent;
 }
 
 .card>.navbar{
@@ -230,14 +231,6 @@ a:hover {
 }
 
 /************** Garaje **************/
-/** Progress bar **/
-.progress-complete{
-    width: 100%;
-}
-
-.progress-empty{
-    width: 100%;
-}
 
 
 

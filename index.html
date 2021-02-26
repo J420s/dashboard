@@ -61,6 +61,8 @@
             <a class="navbar-brand px-lg-3 px-1 mr-0" href="index.html">
                 <img src="./assets/images/logo.svg" class="img-fluid" />
             </a>
+
+            <!--- Reloj --->
             <div class="clock">
                 <div id="Date"></div>
                 <ul>
@@ -71,6 +73,7 @@
                     <li id="sec"></li>
                 </ul>
             </div>
+            
             <!--- Profile dropdown --->
             <a href="#" class="dropdown user-dropdown ml-auto" data-toggle="dropdown" aria-haspopup="true">
                 Username
@@ -167,12 +170,13 @@
                                 <div class="title-status d-flex">
                                     <h5>Puerta: Garaje</h5>
                                     <button id="btn-progress" type="button"
-                                        class="btn btn-outline-primary ml-auto">Abrir</button>
+                                        class="btn btn-outline-primary ml-auto">Abrir
+                                    </button>
                                 </div>
-                                <p class="status text-danger">Cerrada</p>
+                                <p id="status" class="text-danger">Cerrada</p>
                                 <div class="progress bg-dark" style="height: 2px;">
-                                    <div class="progress-bar progress-bar-striped progress-bar-animated"
-                                        style="background-color:green"></div>
+                                    <div class="progress-bar progress-bar-striped progress-bar-animated "
+                                        style="width:0;background-color:green"></div>
                                 </div>
                             </div>
 

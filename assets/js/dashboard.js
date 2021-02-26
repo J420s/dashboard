@@ -3,18 +3,37 @@
 window.onload = () => {
 
 	watch()
-	progressBar()
 
-	$('#sidebarCollapse').on('click', (e) => {
+	$('#btn-progress').on('click', () => { progressBar_toggle($('.progress-bar')) })
 
-		$('#sidebar').toggleClass('showed');
-	});
+	
+
+	$('#sidebarCollapse').on('click', () => { $('#sidebar').toggleClass('showed') })
 }
 
-function progressBar(){
+function progressBar_toggle(div) {
+	console.log(div.css("width"))
 
-	$('#btn-progress').addClass
+	let width = div.css("width").replace(/[^0-9]/g,'')
+	let open = width == 0 ? false : true
 
+	div.animate( !open ? {"width":"100%"} : {"width":0}, 10000, function(){
+		$('#btn-progress').attr( !open ? {"class": "btn btn-outline-danger ml-auto"} : {"class": "btn btn-outline-primary ml-auto"})
+		$('#btn-progress').text( !open ? "Cerrar" : "Abrir")
+		$("#status").text( open ? "Cerrada" : "Abierta")
+		$("#status").attr( open ? {"class" : "text-danger"} : {"class" : "text-success"})
+
+	})
+
+	
+	
+	
+}
+
+function progressBar() {
+
+	$('#btn-progress').toggleClass("progress-complete")
+	/*
 	$('#btn-progress').on('click',()=>{
 
 		console.log("ramon")
@@ -22,11 +41,10 @@ function progressBar(){
 		$('.progress-bar').animate({ 'width': '100%' },15000,()=>{
 
 			$('#btn-progress').attr( "class", "btn btn-outline-danger ml-auto" )
-
-			$('#btn-progress').html("Cerrar")
+		$('#btn-progress').html("Cerrar")
 
 		})	
-	})
+	})*/
 }
 
 
